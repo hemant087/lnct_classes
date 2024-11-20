@@ -9,6 +9,14 @@ for i in range(9):
 
     if board[row][col] == " ":
         board[row][col] = Player
+    else:
+        if Player == 'X':
+            Player = "O"
+        else:
+            Player ="X"
+    for i in range(3):
+        print('-'*6)
+        print("|".join(board[i]))
 # for checking row
     for row in board:
         if row[0] == row[1] ==row[2] == Player:
@@ -33,6 +41,3 @@ for i in range(9):
     
     if player_status:
         break
-    for i in range(3):
-        print('-'*6)
-        print("|".join(board[i]))
