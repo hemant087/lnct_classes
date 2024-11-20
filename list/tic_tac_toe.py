@@ -2,11 +2,13 @@ board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 Player = "X"
 player_status = False
 for i in range(9):
+
     print(f"{Player} it's your turn:-   ")
     row = int(input("Enter the row (0,1,2): "))
     col = int(input("Enter the column (0,1,2): "))
 
-    board[row][col] = Player
+    if board[row][col] == " ":
+        board[row][col] = Player
 # for checking row
     for row in board:
         if row[0] == row[1] ==row[2] == Player:
@@ -31,5 +33,6 @@ for i in range(9):
     
     if player_status:
         break
-    for i in board:
-        print(i)
+    for i in range(3):
+        print('-'*6)
+        print("|".join(board[i]))
