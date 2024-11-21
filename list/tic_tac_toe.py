@@ -1,19 +1,22 @@
 board = [[' ',' ',' '],[' ',' ',' '],[' ',' ',' ']]
 Player = "X"
 player_status = False
-for i in range(9):
+turns = 9
 
+
+for i in range(turns):
+#taking index
     print(f"{Player} it's your turn:-   ")
     row = int(input("Enter the row (0,1,2): "))
     col = int(input("Enter the column (0,1,2): "))
 
+#checking the shell is empty or not,, if empty assign player
     if board[row][col] == " ":
         board[row][col] = Player
     else:
-        if Player == 'X':
-            Player = "O"
-        else:
-            Player ="X"
+        turns +=1   #increasing turns, which is get wasted
+        print("oops! this cell already exist")
+        continue
     for i in range(3):
         print('-'*6)
         print("|".join(board[i]))
@@ -41,3 +44,5 @@ for i in range(9):
     
     if player_status:
         break
+else:
+    print("No one won ,, game draw ")
