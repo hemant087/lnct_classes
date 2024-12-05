@@ -52,9 +52,19 @@
 #         d2[k] = v
 # print(d2)
 
-d1 =  {'x': 30, 'y': 10, 'z': 20}
-ans = {}
-for i ,j in d1.items():
-    ans[j] = i
-ans = dict(sorted(ans.items()))
+# d1 =  {'x': 30, 'y': 10, 'z': 20}
+# ans = {}
+# for i ,j in d1.items():
+#     ans[j] = i
+# ans = dict(sorted(ans.items()))
+# print(ans)
+
+lst = ['apple', 'banana', 'apricot', 'cherry', 'blueberry']
+ans ={}
+for i in lst:
+    if i[0] in ans:
+        ans[i[0]] = list(ans[i[0]])+ [i]
+    else:
+        ans[i[0]] = [i]
+
 print(ans)
