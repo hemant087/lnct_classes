@@ -14,10 +14,10 @@ def details(bank, user_name):
 # function for updating the details
 
 
-def update(bank):
-    status = login(bank)
-    if status == True:
-        bank = details(bank, bank[user_name])
+def update(bank,user_name):
+    # status = login(bank)
+    # if status == True:
+    bank = details(bank, bank[user_name])
 
 
 # function for login
@@ -25,7 +25,7 @@ def login(bank):
     user_name = input("Enter the user name:  ")
     if user_name in bank:
         password = input(f"{user_name} Enter your password: ")
-        if password == bank[user_name][password]:
+        if password == bank[user_name]['password']:
             print(f"{user_name} Welcome to the bank, how can I help you, sir/ma'am?")
             return True
         else:
@@ -68,10 +68,10 @@ while True:
     elif key_pressed == 3:
         user_name = input("Enter the user name:  ")
         if user_name in bank:
-            password = input(f"{user_name} Enter your password: ")
-            if password == bank[user_name][password]:
+            pas = input(f"{user_name} Enter your password: ")
+            if pas == bank[user_name]['password']:
                 print(f"{user_name}, your account ready for update")
-                update(bank,user_name)
+                update(bank, user_name)
             else:
                 print(f"Oops! Wrong password, {user_name}.")
         else:
