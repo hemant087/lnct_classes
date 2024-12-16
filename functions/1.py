@@ -57,13 +57,20 @@
 
 
 #   --------------------
-lst = []
-num = 5
-for i in range(num):
-    if i == 0:
-        lst.append(0)
-    elif i == 1:
-        lst.append(1)
-    elif i >=2:
-        lst.append(lst[i-1]+lst[i-2])
-print(lst)
+# lst = []
+# num = 5
+# for i in range(num):
+#     if i == 0:
+#         lst.append(0)
+#     elif i == 1:
+#         lst.append(1)
+#     elif i >=2:
+#         lst.append(lst[i-1]+lst[i-2])
+# print(lst)
+
+
+def add(n,s):
+    if n == 10:
+        return s + add(n,s)
+    n += 1
+print(add(0,0))
