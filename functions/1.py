@@ -69,8 +69,104 @@
 # print(lst)
 
 
-def add(n,s):
-    if n == 10:
-        return s + add(n,s)
-    n += 1
-print(add(0,0))
+# def add(n,s):
+#     if n == 10:
+#         return s + add(n,s)
+#     n += 1
+# print(add(0,0))
+
+#----------------------------------------------------------
+
+# def fun(n,s):
+#     if n == 0:
+#         return s
+#     s = s+n%10
+#     n = n//10
+#     return fun(n,s)
+# print(fun(12345,0))
+
+# def fun(n,s):
+#     if n == 0:
+#         return 
+#     s = s+ n%10
+#     n = n//10
+#     return fun(n,s)
+# print(fun(12345,0))
+
+# def fun(n):
+#     if n == 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     else:
+#         return fun(n-1) + fun(n-2)
+# print(fun(7))
+
+# -----------------------------------
+
+
+# def palindrome(s):
+#     if len(s)<=1:
+#         return "True"
+#     elif s[0] != s[-1]:
+#         print(s[0],s[-1])
+#         return False
+#     print(s[0],s[-1])
+#     return palindrome(s[1:-1])
+# print(palindrome("abccba"))
+
+
+# --------------------------------
+
+# def rev(s):
+#     if len(s) <= 0:
+#         return s
+#     else:
+#         return s[-1]+rev(s[0:-1])
+# print(rev("hello"))
+
+# ----------------------------------------
+
+# def sam(lst):
+#     if len(lst) <=0:
+#         return 0
+#     else:
+#         return lst[0]+sam(lst[1:])
+# print(sam([1,2,3,4,5,6]))
+
+# ---------------------------------------
+
+# count 
+
+# def count_v(s):
+#     if len(s) <=0:
+#         return 0
+#     else:
+#         if s[0] in ['a','i','o','u','e']:
+#             return 1+count_v(s[1:])
+#         else:
+#             return 0+count_v(s[1:])
+        
+# print(count_v("education"))
+
+# ----------------------------------------
+
+# def check_p(num):
+#     if num == 0:
+#         return 
+#     else:
+#         if num %2 ==0:
+
+# def fun(a,n):
+#     if n==0:
+#         return 1
+#     else:
+#         return a*fun(a,n-1) 
+# print(fun(2,5))
+
+# ------------------------------------
+
+
+temp = lambda x: x*x
+print(temp([2,3]))
+
