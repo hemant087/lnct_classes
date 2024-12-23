@@ -138,16 +138,6 @@
 
 # count 
 
-# def count_v(s):
-#     if len(s) <=0:
-#         return 0
-#     else:
-#         if s[0] in ['a','i','o','u','e']:
-#             return 1+count_v(s[1:])
-#         else:
-#             return 0+count_v(s[1:])
-        
-# print(count_v("education"))
 
 # ----------------------------------------
 
@@ -167,6 +157,67 @@
 # ------------------------------------
 
 
-temp = lambda x: x*x
-print(temp([2,3]))
+# temp = lambda x: x*x for x in lst:
+# print(temp([2,3]))
 
+# -------------------------------------------
+
+
+# num = [1,2,3,4,5]
+
+# temp = lambda x,y: x+y
+# print(temp(5,2))
+
+# print(list(map(lambda x: x**2, num)))
+
+# --------------------------------
+
+# def fun(s):
+#     if len(s) <=0:
+#         return 0
+#     else:
+#         if s[0] in ['a','i','o','u','e']:
+#             return 1 + fun(s[1:])
+#         else:
+#             return 0+fun(s[1:])
+# print(fun("hello"))
+
+# def count_v(s):
+#     if len(s) <=0:
+#         return 0
+#     else:
+#         if s[0] in ['a','i','o','u','e']:
+#             return 1+count_v(s[1:])
+#         else:
+#             return count_v(s[1:])
+        
+# print(count_v("education"))
+
+
+# -------------------------------------------
+
+# def fun(n,i):
+#     if n == i:
+#         return 1
+#     elif n % i == 0:
+#         return 1 + fun(n,i+1)
+#     else:
+#         return fun(n,i+1)
+# print(fun(7,1))
+
+# if fun(8,1) == 2:
+#     print("prime")
+# else:
+#     print("not prime")
+
+# ----------------------------------------
+
+# def fun(a):
+#     return a**2
+# lst = [1,2,3,4,5]
+# temp = list(map(fun,lst))
+# print(temp)
+
+a = 11
+temp  = lambda a: 18>a == 0
+print(temp(a))
