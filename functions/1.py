@@ -218,6 +218,15 @@
 # temp = list(map(fun,lst))
 # print(temp)
 
-a = 11
-temp  = lambda a: 18>a == 0
-print(temp(a))
+# a = 11
+# temp  = lambda a: 18>a == 0
+# print(temp(a))
+
+# ----------------------------------------------------
+
+# m = filter(lambda a: mx = a if a>mx else mx = mx )
+
+# Input: [[1, 2], [3, [4, 5]]] → Output: [1, 2, 3, 4, 5]
+
+n = 10
+print('even') if n%2 == 0 else print('odd')
