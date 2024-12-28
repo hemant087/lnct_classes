@@ -228,5 +228,31 @@
 
 # Input: [[1, 2], [3, [4, 5]]] → Output: [1, 2, 3, 4, 5]
 
-n = 10
-print('even') if n%2 == 0 else print('odd')
+# n = 10
+# temp print('even') if n%2 == 0 else print('odd')
+# lst = ["hello",'hii','Hemant']
+
+
+# fun = list(map(lambda s:s[::-1] if lst.index(s)%2!=0 else s,lst))
+# print(fun)
+# lst = [[3, 2], [1, 4, 5]]
+# def fun(lst):
+    
+# fun = list(map(lambda x: list()+x,lst))
+# print(fun)
+
+
+import cv2
+import mediapipe as mp
+import time
+
+cap = cv2.VideoCapture(0)
+
+while True:
+    success, img = cap.read()
+
+    cv2.imshow("Image",img)
+    cv2.waitKey(1)
+
+
+print([1,2]+[3,4])
