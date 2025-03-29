@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Handling Problems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question-card {
+            background: white;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-card h2 {
+            color: #0056b3;
+            font-size: 18px;
+        }
+
+        .question-card p {
+            color: #555;
+        }
+
+        .test-case {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>File Handling Problems</h1>
+        <div class="question-card">
+            <h2>1. Count Words in a File</h2>
+            <p>Write a function that reads a file and returns the count of words in it.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                "Hello world! Python is great."<br>
+                Output: <strong>5</strong>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>2. Find the Longest Word in a File</h2>
+            <p>Read a text file and return the longest word.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                "Artificial Intelligence is fascinating."<br>
+                Output: <strong>"Intelligence"</strong>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>3. Count Occurrences of a Specific Word</h2>
+            <p>Read a file and count the occurrences of a given word.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                "Python is fun. Learning Python is great."<br>
+                Word to search: <strong>"Python"</strong><br>
+                Output: <strong>2</strong>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>4. Remove Blank Lines from a File</h2>
+            <p>Write a program to remove all blank lines from a text file.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                nginx<br>
+                Copy<br>
+                Edit<br>
+                Hello<br>
+                <br>
+                World<br>
+                <br>
+                Python<br>
+                Output File:<br>
+                nginx<br>
+                Copy<br>
+                Edit<br>
+                Hello<br>
+                World<br>
+                Python
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>5. Reverse the Contents of a File</h2>
+            <p>Read a file and write its contents in reverse order to another file.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                scss<br>
+                Copy<br>
+                Edit<br>
+                Line 1<br>
+                Line 2<br>
+                Line 3<br>
+                Output File:<br>
+                scss<br>
+                Copy<br>
+                Edit<br>
+                Line 3<br>
+                Line 2<br>
+                Line 1
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>6. Copy a File</h2>
+            <p>Write a function that copies the content of one file to another.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                bash<br>
+                Copy<br>
+                Edit<br>
+                This is a test file.<br>
+                Output File (copy):<br>
+                bash<br>
+                Copy<br>
+                Edit<br>
+                This is a test file.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>7. Remove Punctuation from a File</h2>
+            <p>Remove all punctuation marks from a text file.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                kotlin<br>
+                Copy<br>
+                Edit<br>
+                Hello, world! Python is fun.<br>
+                Output File:<br>
+                kotlin<br>
+                Copy<br>
+                Edit<br>
+                Hello world Python is fun
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>8. Merge Two Files</h2>
+            <p>Merge the contents of two files into a third file.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                File1:<br>
+                nginx<br>
+                Copy<br>
+                Edit<br>
+                Hello<br>
+                File2:<br>
+                nginx<br>
+                Copy<br>
+                Edit<br>
+                World<br>
+                Output File:<br>
+                nginx<br>
+                Copy<br>
+                Edit<br>
+                Hello<br>
+                World
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>9. Find the Most Frequent Word</h2>
+            <p>Read a file and find the word that appears most frequently.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                nginx<br>
+                Copy<br>
+                Edit<br>
+                apple banana apple orange banana apple<br>
+                Output: "apple"
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>10. Count the Number of Lines in a File</h2>
+            <p>Read a file and count the number of lines.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                nginx<br>
+                Copy<br>
+                Edit<br>
+                Line1<br>
+                Line2<br>
+                Line3<br>
+                Output: 3
+            </div>
+        </div>
+        <div class="question-card">
+            <h2>11. Find and Replace a Word in a File</h2>
+            <p>Replace all occurrences of a given word with another word.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                Hello Python. Python is fun.<br>
+                Replace "Python" with "Java"<br>
+                Output File:<br>
+                Hello Java. Java is fun.
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>12. Check if a File is Empty</h2>
+            <p>Write a function that checks if a file is empty.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File: (empty)<br>
+                Output: <strong>True</strong>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>13. Extract Email Addresses from a File</h2>
+            <p>Extract all email addresses from a given text file.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                Contact us at info@example.com and support@domain.com<br>
+                Output: <strong>['info@example.com', 'support@domain.com']</strong>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>14. Count Unique Words in a File</h2>
+            <p>Find and count unique words from a file.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                apple banana apple orange banana apple<br>
+                Output: <strong>{ "apple": 3, "banana": 2, "orange": 1 }</strong>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>15. Identify Palindrome Words in a File</h2>
+            <p>Read a file and list all words that are palindromes.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                madam racecar apple banana level<br>
+                Output: <strong>['madam', 'racecar', 'level']</strong>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>16. Find the Largest Line by Length</h2>
+            <p>Find the longest line in a file based on character length.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                Short line<br>
+                This is the longest line in the file<br>
+                Another line<br>
+                Output: <strong>"This is the longest line in the file"</strong>
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>17. Convert File to Uppercase</h2>
+            <p>Convert all text in a file to uppercase and save it.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                Hello world<br>
+                Output File:<br>
+                HELLO WORLD
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>18. Sort Words in a File Alphabetically</h2>
+            <p>Sort all words in a file alphabetically and write them back.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                banana apple orange<br>
+                Output File:<br>
+                apple banana orange
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>19. Remove Duplicate Lines from a File</h2>
+            <p>Remove duplicate lines from a file while maintaining order.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                Hello<br>
+                World<br>
+                Hello<br>
+                Python<br>
+                Output File:<br>
+                Hello<br>
+                World<br>
+                Python
+            </div>
+        </div>
+
+        <div class="question-card">
+            <h2>20. Count the Number of Digits in a File</h2>
+            <p>Count how many numeric digits are present in a file.</p>
+            <div class="test-case">
+                <strong>Test Case:</strong><br>
+                Input File:<br>
+                The price is 500 and the year is 2024.<br>
+                Output: <strong>8</strong>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

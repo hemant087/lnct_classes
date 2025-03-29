@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV and JSON Problems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🔹 CSV Problems</h2>
+        <ol>
+            <li>
+                <strong>Read a CSV file and count occurrences of each unique value in a given column.</strong>
+                <pre>ID,Name,City
+1,Alice,Delhi
+2,Bob,Mumbai
+3,Alice,Pune
+4,Bob,Delhi
+5,Charlie,Mumbai</pre>
+                <p><strong>Output:</strong> Delhi: 2, Mumbai: 2, Pune: 1</p>
+            </li>
+            <li>
+                <strong>Convert a CSV file into a JSON file with nested data.</strong>
+                <pre>ID,Name,Subject,Marks
+1,Alice,Math,90
+1,Alice,Science,85
+2,Bob,Math,78
+2,Bob,Science,88</pre>
+                <p><strong>Output:</strong></p>
+                <pre>[
+  {"ID": 1, "Name": "Alice", "Subjects": {"Math": 90, "Science": 85}},
+  {"ID": 2, "Name": "Bob", "Subjects": {"Math": 78, "Science": 88}}
+]</pre>
+            </li>
+            <li>
+                <strong>Find the row with the highest sum of numeric values in a CSV file.</strong>
+                <pre>ID,Math,Science,English
+1,80,90,85
+2,75,95,88
+3,85,80,82</pre>
+                <p><strong>Output:</strong> Row with ID 2 has the highest sum: 258</p>
+            </li>
+            <li>
+                <strong>Merge two CSV files based on a common column.</strong>
+                <pre>
+            File 1 (students.csv):
+            ID,Name
+            1,Alice
+            2,Bob
+            3,Charlie
+            
+            File 2 (scores.csv):
+            ID,Math,Science
+            1,90,85
+            2,78,88
+            3,92,79
+                </pre>
+                <p><strong>Output:</strong></p>
+                <pre>
+            ID,Name,Math,Science
+            1,Alice,90,85
+            2,Bob,78,88
+            3,Charlie,92,79
+                </pre>
+            </li>
+            
+            <li>
+                <strong>Remove duplicate rows from a CSV file while keeping the first occurrence.</strong>
+                <pre>
+            Input (CSV file):
+            ID,Name,City
+            1,Alice,Delhi
+            2,Bob,Mumbai
+            3,Alice,Delhi
+            4,Bob,Pune
+                </pre>
+                <p><strong>Output:</strong></p>
+                <pre>
+            ID,Name,City
+            1,Alice,Delhi
+            2,Bob,Mumbai
+            4,Bob,Pune
+                </pre>
+            </li>
+            
+            <li>
+                <strong>Read a large CSV file and process it in chunks of 100 rows.</strong>
+                <p>Test Case: (Simulated with a 500-row file)</p>
+            </li>
+            
+            <li>
+                <strong>Calculate average marks for each student and save the result in a new CSV file.</strong>
+                <pre>
+            Input (CSV file):
+            ID,Math,Science,English
+            1,80,90,85
+            2,75,95,88
+                </pre>
+                <p><strong>Output:</strong></p>
+                <pre>
+            ID,Average Marks
+            1,85
+            2,86
+                </pre>
+            </li>
+            
+            <li>
+                <strong>Sort a CSV file by multiple columns (e.g., first by "City", then by "Name").</strong>
+                <pre>
+            Input (CSV file):
+            ID,Name,City
+            1,Alice,Delhi
+            2,Bob,Mumbai
+            3,Alice,Pune
+            4,Bob,Delhi
+                </pre>
+                <p><strong>Output:</strong></p>
+                <pre>
+            ID,Name,City
+            4,Bob,Delhi
+            1,Alice,Delhi
+            2,Bob,Mumbai
+            3,Alice,Pune
+                </pre>
+            </li>
+            
+            <li>
+                <strong>Detect missing values in a CSV file and replace them with "N/A".</strong>
+                <pre>
+            Input (CSV file):
+            ID,Name,City
+            1,Alice,Delhi
+            2,Bob,
+            3,Charlie,Mumbai
+                </pre>
+                <p><strong>Output:</strong></p>
+                <pre>
+            ID,Name,City
+            1,Alice,Delhi
+            2,Bob,N/A
+            3,Charlie,Mumbai
+                </pre>
+            </li>
+            
+            <li>
+                <strong>Create a histogram of numerical values from a CSV file.</strong>
+                <pre>
+            Input (CSV file):
+            ID,Marks
+            1,85
+            2,90
+            3,78
+            4,92
+            5,88
+                </pre>
+                <p><strong>Output:</strong> Histogram visualization</p>
+            </li>
+            
+            <li>
+                <strong>Read a CSV file and count occurrences of each unique value in a given column.</strong>
+                <pre>
+            ID,Name,City
+            1,Alice,Delhi
+            2,Bob,Mumbai
+            3,Alice,Pune
+            4,Bob,Delhi
+            5,Charlie,Mumbai
+                </pre>
+                <p><strong>Output:</strong> Delhi: 2, Mumbai: 2, Pune: 1</p>
+            </li>
+            
+        </ol>
+
+        <h2>🔹 JSON Problems</h2>
+        <ol>
+            <li>
+                <strong>Read a JSON file and extract only records where age &gt; 30.</strong>
+                <pre>[
+  {"name": "Alice", "age": 25},
+  {"name": "Bob", "age": 35},
+  {"name": "Charlie", "age": 40}
+]</pre>
+                <p><strong>Output:</strong></p>
+                <pre>[
+  {"name": "Bob", "age": 35},
+  {"name": "Charlie", "age": 40}
+]</pre>
+            </li>
+            <li>
+                <strong>Flatten a deeply nested JSON file.</strong>
+                <pre>{
+  "user": {
+    "id": 1,
+    "info": {
+      "name": "Alice",
+      "contact": {"email": "alice@example.com"}
+    }
+  }
+}</pre>
+                <p><strong>Output:</strong></p>
+                <pre>{
+  "user_id": 1,
+  "user_info_name": "Alice",
+  "user_info_contact_email": "alice@example.com"
+}</pre>
+            </li>
+            <li>
+                <strong>Convert a JSON file to CSV format.</strong>
+                <pre>
+            Input (JSON file):
+            [
+              {"name": "Alice", "age": 25, "city": "Delhi"},
+              {"name": "Bob", "age": 30, "city": "Mumbai"}
+            ]
+                </pre>
+                <p><strong>Output (CSV):</strong></p>
+                <pre>
+            name,age,city
+            Alice,25,Delhi
+            Bob,30,Mumbai
+                </pre>
+            </li>
+            
+            <li>
+                <strong>Merge two JSON files based on a common key.</strong>
+                <pre>
+            File 1:
+            [
+              {"ID": 1, "Name": "Alice"},
+              {"ID": 2, "Name": "Bob"}
+            ]
+            
+            File 2:
+            [
+              {"ID": 1, "Marks": 90},
+              {"ID": 2, "Marks": 88}
+            ]
+                </pre>
+                <p><strong>Output (Merged JSON):</strong></p>
+                <pre>
+            [
+              {"ID": 1, "Name": "Alice", "Marks": 90},
+              {"ID": 2, "Name": "Bob", "Marks": 88}
+            ]
+                </pre>
+            </li>
+            
+            <li>
+                <strong>Remove duplicate records from a JSON file.</strong>
+                <p>Test Case: Removes repeated records while keeping the first occurrence.</p>
+            </li>
+            
+            <li>
+                <strong>Extract all unique keys from a JSON file.</strong>
+                <p>Test Case: Identifies and lists all unique keys across records.</p>
+            </li>
+            
+            <li>
+                <strong>Find the record with the highest value in a specific field.</strong>
+                <p>Test Case: Identifies the record containing the maximum value for a given key.</p>
+            </li>
+            
+            <li>
+                <strong>Convert a JSON array into multiple CSV files based on a field.</strong>
+                <p>Test Case: Splits JSON records into different CSV files based on a specific key.</p>
+            </li>
+            
+            <li>
+                <strong>Validate JSON structure using a schema.</strong>
+                <p>Test Case: Checks if a JSON file follows a predefined schema format.</p>
+            </li>
+            
+            <li>
+                <strong>Convert JSON data into a SQLite database.</strong>
+                <p>Test Case: Parses JSON records and stores them into an SQLite database table.</p>
+            </li>
+            
+        </ol>
+    </div>
+</body>
+</html>

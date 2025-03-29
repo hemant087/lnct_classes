@@ -1,0 +1,27 @@
+[
+    {
+        "ID": "1",
+        "Name": "Alice",
+        "City": "Delhi"
+    },
+    {
+        "ID": "2",
+        "Name": "Bob",
+        "City": "Mumbai"
+    },
+    {
+        "ID": "3",
+        "Name": "Alice",
+        "City": "Pune"
+    },
+    {
+        "ID": "4",
+        "Name": "Bob",
+        "City": "Delhi"
+    },
+    {
+        "ID": "5",
+        "Name": "Charlie",
+        "City": "Mumbai"
+    }
+]

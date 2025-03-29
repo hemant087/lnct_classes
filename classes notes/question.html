@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictionary Practice Questions</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #fff;
+    }
+
+    header {
+      background: #333;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      color: #333;
+    }
+
+    .container h2 {
+      background: #2a5298;
+      margin: 0;
+      padding: 1rem;
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .question {
+      padding: 1.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .question:last-child {
+      border-bottom: none;
+    }
+
+    .question p {
+      margin: 0.5rem 0;
+    }
+
+    .code {
+      background: #f4f4f4;
+      color: #333;
+      padding: 0.8rem;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+      white-space: pre-wrap;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: #2a5298;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Python Dictionary Practice Questions</h1>
+</header>
+
+<div class="container">
+  <h2>Medium Level Questions</h2>
+
+  <div class="question">
+    <p><strong>1. Frequency Counter</strong></p>
+    <p>Write a program to count the frequency of each character in a given string using a dictionary.</p>
+    <div class="code">
+      Input: "hello world" <br>
+      Output: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>2. Merge Dictionaries</strong></p>
+    <p>Given two dictionaries, merge them into one. If there are duplicate keys, add their values.</p>
+    <div class="code">
+      Input: <br>
+      dict1 = {'a': 10, 'b': 20, 'c': 30} <br>
+      dict2 = {'b': 5, 'c': 15, 'd': 25} <br>
+      Output: {'a': 10, 'b': 25, 'c': 45, 'd': 25}
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>3. Sort Dictionary by Value</strong></p>
+    <p>Write a program to sort a dictionary by its values in ascending order.</p>
+    <div class="code">
+      Input: {'x': 30, 'y': 10, 'z': 20} <br>
+      Output: {'y': 10, 'z': 20, 'x': 30}
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>4. Invert Dictionary</strong></p>
+    <p>Write a program to invert a dictionary, swapping keys and values.</p>
+    <div class="code">
+      Input: {'a': 1, 'b': 2, 'c': 3} <br>
+      Output: {1: 'a', 2: 'b', 3: 'c'}
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>5. Word Lengths</strong></p>
+    <p>Create a dictionary from a list of words where the keys are the words, and the values are their lengths.</p>
+    <div class="code">
+      Input: ['apple', 'banana', 'cherry'] <br>
+      Output: {'apple': 5, 'banana': 6, 'cherry': 6}
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>6. Nested Dictionary Access</strong></p>
+    <p>Write a program to access the value of 'math' from the given nested dictionary.</p>
+    <div class="code">
+      student = {<br>
+      &nbsp;&nbsp;'name': 'John',<br>
+      &nbsp;&nbsp;'marks': {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;'math': 85,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;'science': 92<br>
+      &nbsp;&nbsp;}<br>
+      }<br>
+      Output: 85
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>7. Remove Key with Lowest Value</strong></p>
+    <p>Write a program to remove the key with the lowest value in a dictionary.</p>
+    <div class="code">
+      Input: {'a': 10, 'b': 5, 'c': 20} <br>
+      Output: {'a': 10, 'c': 20}
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>8. Group by First Character</strong></p>
+    <p>Group strings from a list by their first character into a dictionary.</p>
+    <div class="code">
+      Input: ['apple', 'banana', 'apricot', 'cherry', 'blueberry'] <br>
+      Output: {'a': ['apple', 'apricot'], 'b': ['banana', 'blueberry'], 'c': ['cherry']}
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>9. Convert Two Lists into a Dictionary</strong></p>
+    <p>Write a program to create a dictionary from two lists: one with keys and the other with values.</p>
+    <div class="code">
+      Input: <br>
+      keys = ['name', 'age', 'city'] <br>
+      values = ['Alice', 25, 'New York'] <br>
+      Output: {'name': 'Alice', 'age': 25, 'city': 'New York'}
+    </div>
+  </div>
+
+  <div class="question">
+    <p><strong>10. Find Common Keys with Same Values</strong></p>
+    <p>Find keys common in two dictionaries that also have the same values.</p>
+    <div class="code">
+      Input: <br>
+      dict1 = {'a': 10, 'b': 20, 'c': 30} <br>
+      dict2 = {'b': 20, 'c': 25, 'd': 30} <br>
+      Output: {'b': 20}
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2024 Code with Hemant
+</footer>
+
+</body>
+</html>

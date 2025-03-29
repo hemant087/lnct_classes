@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes on Python Functions</title>
+    <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          line-height: 1.6;
+          background-color: #f0f4f8;
+          margin: 0;
+          padding: 0;
+          color: #333;
+      }
+
+      header {
+          background: #4a90e2;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+          margin: 0;
+          font-size: 2.5em;
+      }
+
+      section {
+          padding: 20px;
+          margin: 20px auto;
+          background: #fff;
+          border-radius: 8px;
+          max-width: 800px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+          color: #4a90e2;
+          border-bottom: 2px solid #e0e0e0;
+          padding-bottom: 10px;
+      }
+
+      p, ul, ol {
+          margin: 15px 0;
+      }
+
+      code {
+          background: #e8f0fe;
+          padding: 2px 4px;
+          border-radius: 4px;
+          font-family: "Courier New", Courier, monospace;
+      }
+
+      .example {
+          background: #e8f5e9;
+          border-left: 5px solid #4caf50;
+          margin: 20px 0;
+          padding: 10px 15px;
+          border-radius: 4px;
+      }
+
+      footer {
+          text-align: center;
+          padding: 15px 0;
+          margin-top: 20px;
+          background: #4a90e2;
+          color: #fff;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+          header, footer {
+              padding: 15px;
+          }
+
+          section {
+              margin: 10px;
+              padding: 15px;
+          }
+
+          h1 {
+              font-size: 2em;
+          }
+      }
+  </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Notes on Python Functions</h1>
+    </header>
+
+    <section>
+        <h2>1. Introduction to Functions</h2>
+        <p>A function is a block of reusable code that performs a specific task. Functions are a key feature in Python to
+            achieve modular, organized, and maintainable code.</p>
+        <ul>
+            <li><strong>Code Reusability:</strong> Once a function is defined, it can be used multiple times without rewriting
+                the same code.</li>
+            <li><strong>Improved Readability:</strong> Breaking down a program into functions makes it easier to understand.
+            </li>
+            <li><strong>Easier Debugging and Maintenance:</strong> Functions help isolate parts of the code, making it easier
+                to spot issues.</li>
+            <li><strong>Enables Modular Programming:</strong> Functions allow complex programs to be broken down into simpler
+                subprograms, which improves flexibility and collaboration.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Types of Functions</h2>
+        <ol>
+            <li><strong>Built-in Functions:</strong> Python provides several built-in functions like <code>print()</code>,
+                <code>len()</code>, <code>type()</code>, etc., which are ready to use.</li>
+            <li><strong>User-defined Functions:</strong> These are functions created by the user to perform specific tasks not
+                covered by built-in functions.</li>
+        </ol>
+    </section>
+
+    <section>
+      <h2>3. Defining and Calling a Function</h2>
+      <p><strong>Syntax:</strong></p>
+      <img src="51.png" alt="" style="display: block; margin: 20px auto; max-width: 100%; height: auto; border: 2px solid #4a90e2; border-radius: 8px;">
+      <!-- <div class="example">
+          <code>
+              def function_name(parameters):<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;"""docstring"""<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;statements<br>
+          </code>
+      </div> -->
+      <p><strong>Calling a Function:</strong></p>
+      <div class="example">
+          <code>
+              function_name(arguments)<br>
+          </code>
+      </div>
+      <p><strong>Example:</strong></p>
+      <div class="example">
+          <code>
+              def greet(name):<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print(f"Hello, {name}!")<br>
+              greet("Hemant")  # Output: Hello, Hemant!
+          </code>
+      </div>
+  </section>
+
+    <section>
+        <h2>4. Function Components</h2>
+        <ul>
+            <li><strong>Function Name:</strong> A unique identifier for the function.</li>
+            <li><strong>Parameters/Arguments:</strong> Variables that accept input values for the function.</li>
+            <li><strong>Docstring:</strong> Optional text explaining what the function does.</li>
+            <li><strong>Return Statement:</strong> The value the function will send back to the caller.</li>
+        </ul>
+        <div class="example">
+            <code>
+                def add(a, b):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br>
+                result = add(5, 3)<br>
+                print(result)  # Output: 8
+            </code>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Function Parameters</h2>
+        <ol>
+            <li><strong>Positional Arguments:</strong> Passed in the order they are defined.</li>
+            <div class="example">
+                <code>
+                    def multiply(x, y):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return x * y<br>
+                    print(multiply(2, 3))  # Output: 6
+                </code>
+            </div>
+            <li><strong>Default Arguments:</strong> Parameters with default values that are optional during the function call.
+            </li>
+            <div class="example">
+                <code>
+                    def greet(name="Student"):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;print(f"Hello, {name}!")<br>
+                    greet()  # Output: Hello, Student!
+                </code>
+            </div>
+            <li><strong>Keyword Arguments:</strong> Specify the parameter names during the function call.</li>
+            <div class="example">
+                <code>
+                    def display_info(name, age):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;print(f"Name: {name}, Age: {age}")<br>
+                    display_info(age=20, name="Hemant")
+                </code>
+            </div>
+            <li><strong>Variable-Length Arguments:</strong></li>
+            <ul>
+                <li><strong>*args:</strong> Accepts non-keyword variable-length arguments (tuple).</li>
+                <div class="example">
+                    <code>
+                        def sum_numbers(*args):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;return sum(args)<br>
+                        print(sum_numbers(1, 2, 3, 4))  # Output: 10
+                    </code>
+                </div>
+                <li><strong>**kwargs:</strong> Accepts keyword variable-length arguments (dictionary).</li>
+                <div class="example">
+                    <code>
+                        def display_data(**kwargs):<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;for key, value in kwargs.items():<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"{key}: {value}")<br>
+                        display_data(name="Hemant", age=20)
+                    </code>
+                </div>
+            </ul>
+        </ol>
+    </section>
+
+    <section>
+        <h2>6. Scope of Variables</h2>
+        <ul>
+            <li><strong>Local Scope:</strong> Variables defined inside a function are local to that function.</li>
+            <li><strong>Global Scope:</strong> Variables defined outside of any function are accessible globally.</li>
+            <li><strong>Global Keyword:</strong> Allows modifying global variables inside a function.</li>
+        </ul>
+        <div class="example">
+            <code>
+                x = 10<br>
+                def modify_global():<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;global x<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;x = 20<br>
+                modify_global()<br>
+                print(x)  # Output: 20
+            </code>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. Anonymous Functions (Lambda)</h2>
+        <p>Lambda functions are small, anonymous functions defined using the <code>lambda</code> keyword.</p>
+        <div class="example">
+            <code>
+                square = lambda x: x ** 2<br>
+                print(square(5))  # Output: 25
+            </code>
+        </div>
+    </section>
+
+    <section>
+        <h2>8. Higher-Order Functions</h2>
+        <ol>
+            <li><strong>Functions as Arguments:</strong> Functions can be passed as arguments to other functions.</li>
+            <div class="example">
+                <code>
+                    def apply_function(func, value):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return func(value )<br>
+                    result = apply_function(lambda x: x**2, 5)<br>
+                    print(result)  # Output: 25
+                </code>
+            </div>
+            <li><strong>Functions as Return Values:</strong> Functions can return other functions as results.</li>
+            <div class="example">
+                <code>
+                    def outer_function():<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;def inner_function():<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Hello from inner function"<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return inner_function<br>
+                    func = outer_function()<br>
+                    print(func())  # Output: Hello from inner function
+                </code>
+            </div>
+        </ol>
+    </section>
+
+    <section>
+        <h2>9. Recursion</h2>
+        <p>Recursion occurs when a function calls itself. It's useful for solving problems like factorial, Fibonacci
+            sequence, etc.</p>
+        <div class="example">
+            <code>
+                def factorial(n):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if n == 0:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return n * factorial(n - 1)<br>
+                print(factorial(5))  # Output: 120
+            </code>
+        </div>
+    </section>
+
+    <section>
+        <h2>10. Decorators</h2>
+        <p><strong>Definition:</strong> Functions that modify or extend the behavior of other functions.</p>
+        <p><strong>Syntax:</strong></p>
+        <div class="example">
+            <code>
+                def decorator(func):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;def wrapper():<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Before function call")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func()<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("After function call")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return wrapper<br><br>
+                @decorator<br>
+                def say_hello():<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("Hello!")<br>
+                say_hello()
+            </code>
+        </div>
+        <p><strong>Output:</strong></p>
+        <div class="example">
+            <code>
+                Before function call<br>
+                Hello!<br>
+                After function call
+            </code>
+        </div>
+    </section>
+
+    <section>
+        <h2>11. Modules and Functions</h2>
+        <p>Functions can be imported from external modules for use.</p>
+        <div class="example">
+            <code>
+                import math<br>
+                print(math.sqrt(16))  # Output: 4.0
+            </code>
+        </div>
+    </section>
+
+    <section>
+        <h2>12. Best Practices</h2>
+        <ul>
+            <li><strong>Meaningful Function Names:</strong> Choose names that describe the function's purpose.</li>
+            <li><strong>Keep Functions Small and Focused:</strong> A function should do one thing and do it well.</li>
+            <li><strong>Document Functions:</strong> Use docstrings to describe what the function does and its parameters.
+            </li>
+            <li><strong>Use Default Arguments Judiciously:</strong> Default arguments should have meaningful default values.
+            </li>
+            <li><strong>Avoid Side Effects:</strong> Functions should avoid modifying global variables or causing unintended
+                side effects.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Python Notes by Reffto</p>
+    </footer>
+
+</body>
+
+</html>

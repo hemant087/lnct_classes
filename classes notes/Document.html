@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Functions Practice Problems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h3 {
+            color: #555;
+        }
+        pre {
+            background-color: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .problem {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Python Functions Practice Problems</h1>
+
+    <div class="problem">
+        <h3>1. <strong>Sum of Two Numbers</strong></h3>
+        <p>Write a function <code>sum_numbers(a, b)</code> that returns the sum of two numbers.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(sum_numbers(3, 5))  # Output: 8
+print(sum_numbers(-2, 10))  # Output: 8
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>2. <strong>Factorial of a Number</strong></h3>
+        <p>Write a function <code>factorial(n)</code> that returns the factorial of a number.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(factorial(5))  # Output: 120
+print(factorial(0))  # Output: 1
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>3. <strong>Check if Number is Even</strong></h3>
+        <p>Write a function <code>is_even(num)</code> that returns <code>True</code> if the number is even, otherwise <code>False</code>.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(is_even(4))  # Output: True
+print(is_even(7))  # Output: False
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>4. <strong>Fibonacci Sequence</strong></h3>
+        <p>Write a function <code>fibonacci(n)</code> that returns the first <code>n</code> Fibonacci numbers as a list.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(fibonacci(5))  # Output: [0, 1, 1, 2, 3]
+print(fibonacci(7))  # Output: [0, 1, 1, 2, 3, 5, 8]
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>5. <strong>Check Palindrome</strong></h3>
+        <p>Write a function <code>is_palindrome(s)</code> that checks if a given string is a palindrome.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(is_palindrome("madam"))  # Output: True
+print(is_palindrome("hello"))  # Output: False
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>6. <strong>Reverse a String</strong></h3>
+        <p>Write a function <code>reverse_string(s)</code> that returns the reversed version of a string.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(reverse_string("python"))  # Output: "nohtyp"
+print(reverse_string("abc"))  # Output: "cba"
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>7. <strong>Find Maximum in a List</strong></h3>
+        <p>Write a function <code>find_max(lst)</code> that returns the maximum number in a list.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(find_max([1, 2, 3, 4, 5]))  # Output: 5
+print(find_max([-10, 0, 10]))  # Output: 10
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>8. <strong>Count Vowels in a String</strong></h3>
+        <p>Write a function <code>count_vowels(s)</code> that counts the number of vowels in a string.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(count_vowels("hello"))  # Output: 2
+print(count_vowels("abcde"))  # Output: 2
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>9. <strong>Power of a Number</strong></h3>
+        <p>Write a function <code>power(base, exponent)</code> that returns the result of raising the base to the given exponent.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(power(2, 3))  # Output: 8
+print(power(5, 0))  # Output: 1
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>10. <strong>Check Prime Number</strong></h3>
+        <p>Write a function <code>is_prime(n)</code> that returns <code>True</code> if a number is prime, otherwise <code>False</code>.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(is_prime(7))  # Output: True
+print(is_prime(10))  # Output: False
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>11. <strong>Sum of List Elements</strong></h3>
+        <p>Write a function <code>sum_list(lst)</code> that returns the sum of all elements in a list.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(sum_list([1, 2, 3, 4]))  # Output: 10
+print(sum_list([-1, -2, -3]))  # Output: -6
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>12. <strong>Check Anagram</strong></h3>
+        <p>Write a function <code>is_anagram(str1, str2)</code> that checks if two strings are anagrams.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(is_anagram("listen", "silent"))  # Output: True
+print(is_anagram("abc", "def"))  # Output: False
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>13. <strong>Find GCD</strong></h3>
+        <p>Write a function <code>gcd(a, b)</code> that returns the greatest common divisor of two numbers.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(gcd(12, 18))  # Output: 6
+print(gcd(7, 13))  # Output: 1
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>14. <strong>Sort a List</strong></h3>
+        <p>Write a function <code>sort_list(lst)</code> that returns a sorted list.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(sort_list([3, 1, 4, 1, 5]))  # Output: [1, 1, 3, 4, 5]
+print(sort_list([10, -1, 0, 2]))  # Output: [-1, 0, 2, 10]
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>15. <strong>Calculate Simple Interest</strong></h3>
+        <p>Write a function <code>simple_interest(p, r, t)</code> that calculates simple interest.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(simple_interest(1000, 5, 2))  # Output: 100.0
+print(simple_interest(2000, 3, 1))  # Output: 60.0
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>16. <strong>Find Second Largest Number</strong></h3>
+        <p>Write a function <code>second_l argest(lst)</code> that returns the second largest number in a list.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(second_largest([1, 2, 3, 4, 5]))  # Output: 4
+print(second_largest([10, 10, 9]))  # Output: 9
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>17. <strong>Convert Celsius to Fahrenheit</strong></h3>
+        <p>Write a function <code>celsius_to_fahrenheit(c)</code> that converts Celsius to Fahrenheit.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(celsius_to_fahrenheit(0))  # Output: 32.0
+print(celsius_to_fahrenheit(100))  # Output: 212.0
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>18. <strong>Check Armstrong Number</strong></h3>
+        <p>Write a function <code>is_armstrong(n)</code> that checks if a number is an Armstrong number.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(is_armstrong(153))  # Output: True
+print(is_armstrong(123))  # Output: False
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>19. <strong>Find Length of a String</strong></h3>
+        <p>Write a function <code>string_length(s)</code> that returns the length of a string.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(string_length("hello"))  # Output: 5
+print(string_length(""))  # Output: 0
+        </pre>
+    </div>
+
+    <div class="problem">
+        <h3>20. <strong>Find Unique Elements</strong></h3>
+        <p>Write a function <code>unique_elements(lst)</code> that returns a list of unique elements from the input list.</p>
+        <h4>Test Cases:</h4>
+        <pre>
+print(unique_elements([1, 2, 2, 3, 4]))  # Output: [1, 2, 3, 4]
+print(unique_elements([5, 5, 5]))  # Output: [5]
+        </pre>
+    </div>
+
+</body>
+</html>

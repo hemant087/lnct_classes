@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lambda Function Challenges</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+
+        .question {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .code-block {
+            background-color: #f9f9f9;
+            border-left: 5px solid #4CAF50;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+
+        .test-case {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .test-case-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lambda Function Challenges (Assig. - 03) </h1>
+
+    <div class="question">
+        <h2>1. Lambda to Reverse Alternate Words in a String</h2>
+        <p>Write a lambda function that takes a string and reverses alternate words in it.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda s: ' '.join([word[::-1] if i % 2 else word for i, word in enumerate(s.split())])</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>"The quick brown fox"</code></p>
+            <p>Output: <code>"The kciuq brown xof"</code></p>
+            <p>Input: <code>"Python is fun"</code></p>
+            <p>Output: <code>"Python si fun"</code></p>
+        </div>
+    </div>
+
+    <div class="question">
+        <h2>2. Lambda to Flatten and Sort Nested Lists</h2>
+        <p>Write a lambda function to flatten a list of lists and sort it in ascending order.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda lst: sorted([item for sublist in lst for item in sublist])</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>[[3, 2], [1, 4, 5]]</code></p>
+            <p>Output: <code>[1, 2, 3, 4, 5]</code></p>
+            <p>Input: <code>[[10, -1], [7, 8, 0]]</code></p>
+            <p>Output: <code>[-1, 0, 7, 8, 10]</code></p>
+        </div>
+    </div>
+
+    <div class="question">
+        <h2>3. Lambda for Fibonacci Sequence</h2>
+        <p>Write a lambda function that returns the nth Fibonacci number using reduce.</p>
+        <!-- <div class="code-block">
+            <pre>from functools import reduce
+func = lambda n: reduce(lambda x, _: x + [x[-1] + x[-2]], range(n-1), [0, 1])[-1]</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>6</code></p>
+            <p>Output: <code>5</code></p>
+            <p>Input: <code>10</code></p>
+            <p>Output: <code>34</code></p>
+        </div>
+    </div>
+
+    <div class="question">
+        <h2>4. Lambda to Identify Palindromic Numbers</h2>
+        <p>Write a lambda function that checks if all numbers in a list are palindromic.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda nums: all(str(num) == str(num)[::-1] for num in nums)</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>[121, 131, 1221]</code></p>
+            <p>Output: <code>True</code></p>
+            <p>Input: <code>[123, 121]</code></p>
+            <p>Output: <code>False</code></p>
+        </div>
+    </div>
+    <div class="question">
+        <h2>5. Lambda for Rotating Elements in a List</h2>
+        <p>Write a lambda function to rotate a list to the left by n places.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda lst, n: lst[n:] + lst[:n]</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>([1, 2, 3, 4], 2)</code></p>
+            <p>Output: <code>[3, 4, 1, 2]</code></p>
+            <p>Input: <code>([7, 8, 9], 1)</code></p>
+            <p>Output: <code>[8, 9, 7]</code></p>
+        </div>
+    </div>
+    
+    <div class="question">
+        <h2>6. Lambda for Prime Check</h2>
+        <p>Write a lambda function to check if a number is prime.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda n: n > 1 and all(n % i for i in range(2, int(n**0.5) + 1))</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>13</code></p>
+            <p>Output: <code>True</code></p>
+            <p>Input: <code>4</code></p>
+            <p>Output: <code>False</code></p>
+        </div>
+    </div>
+    
+    <div class="question">
+        <h2>7. Lambda for Intersection of Two Lists</h2>
+        <p>Write a lambda function that finds the intersection of two lists without using built-in set functions.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda lst1, lst2: [x for x in lst1 if x in lst2]</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>([1, 2, 3], [2, 3, 4])</code></p>
+            <p>Output: <code>[2, 3]</code></p>
+            <p>Input: <code>([5, 6, 7], [8, 9])</code></p>
+            <p>Output: <code>[]</code></p>
+        </div>
+    </div>
+    
+    <div class="question">
+        <h2>8. Lambda to Find All Divisors of a Number</h2>
+        <p>Write a lambda function to find all divisors of a number.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda n: [i for i in range(1, n+1) if n % i == 0]</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>12</code></p>
+            <p>Output: <code>[1, 2, 3, 4, 6, 12]</code></p>
+            <p>Input: <code>7</code></p>
+            <p>Output: <code>[1, 7]</code></p>
+        </div>
+    </div>
+    
+    <div class="question">
+        <h2>9. Lambda to Check for Balanced Parentheses</h2>
+        <p>Write a lambda function to check if a string has balanced parentheses.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda s: all(s.count(x) == s.count(y) for x, y in [('(', ')')])</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>"(()())"</code></p>
+            <p>Output: <code>True</code></p>
+            <p>Input: <code>"(()"</code></p>
+            <p>Output: <code>False</code></p>
+        </div>
+    </div>
+    
+    <div class="question">
+        <h2>10. Lambda for Grouping Even and Odd Numbers</h2>
+        <p>Write a lambda function to separate a list into two lists: one with even numbers and another with odd numbers.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda lst: ([x for x in lst if x % 2 == 0], [x for x in lst if x % 2 != 0])</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>[1, 2, 3, 4, 5]</code></p>
+            <p>Output: <code>([2, 4], [1, 3, 5])</code></p>
+            <p>Input: <code>[6, 7, 8]</code></p>
+            <p>Output: <code>([6, 8], [7])</code></p>
+        </div>
+    </div>
+    <div class="question">
+        <h2>11. Lambda for Factorial Calculation</h2>
+        <p>Write a lambda function to calculate the factorial of a number.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda n: 1 if n == 0 else n * func(n-1)</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>5</code></p>
+            <p>Output: <code>120</code></p>
+            <p>Input: <code>0</code></p>
+            <p>Output: <code>1</code></p>
+        </div>
+    </div>
+    <div class="question">
+        <h2>12. Lambda to Convert Seconds into hh:mm:ss</h2>
+        <p>Write a lambda function to convert seconds into hours, minutes, and seconds.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda sec: f"{sec // 3600:02}:{(sec % 3600) // 60:02}:{sec % 60:02}"</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>3661</code></p>
+            <p>Output: <code>"01:01:01"</code></p>
+            <p>Input: <code>59</code></p>
+            <p>Output: <code>"00:00:59"</code></p>
+        </div>
+    </div>
+    <div class="question">
+        <h2>13. Lambda for Transposing a Matrix</h2>
+        <p>Write a lambda function to transpose a matrix.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda mat: [[row[i] for row in mat] for i in range(len(mat[0]))]</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>[[1, 2], [3, 4]]</code></p>
+            <p>Output: <code>[[1, 3], [2, 4]]</code></p>
+            <p>Input: <code>[[1, 2, 3], [4, 5, 6]]</code></p>
+            <p>Output: <code>[[1, 4], [2, 5], [3, 6]]</code></p>
+        </div>
+    </div>
+    <div class="question">
+        <h2>14. Lambda for String Compression</h2>
+        <p>Write a lambda function to compress consecutive repeating characters in a string.</p>
+        <!-- <div class="code-block">
+            <pre>func = lambda s: ''.join(ch + str(len(list(group))) for ch, group in groupby(s))</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>"aaabb"</code></p>
+            <p>Output: <code>"a3b2"</code></p>
+            <p>Input: <code>"abcd"</code></p>
+            <p>Output: <code>"a1b1c1d1"</code></p>
+        </div>
+    </div>
+    <div class="question">
+        <h2>15. Lambda for Calculating GCD</h2>
+        <p>Write a lambda function to calculate the GCD of two numbers.</p>
+        <!-- <div class="code-block">
+            <pre>from math import gcd
+    func = lambda a, b: gcd(a, b)</pre>
+        </div> -->
+        <div class="test-case">
+            <div class="test-case-title">Test Cases:</div>
+            <p>Input: <code>(12, 18)</code></p>
+            <p>Output: <code>6</code></p>
+            <p>Input: <code>(7, 3)</code></p>
+            <p>Output: <code>1</code></p>
+        </div>
+    </div>
+    
+    
+
+    <footer>
+        &copy; 2024 Lambda Challenges - Created for Learning  By Reffto
+    </footer>
+</body>
+
+</html>

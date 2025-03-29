@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes on Python Functions</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: #4a90e2;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 8px;
+      max-width: 800px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #4a90e2;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 10px;
+    }
+
+    p,
+    ul,
+    ol {
+      margin: 15px 0;
+    }
+
+    code {
+      background: #e8f0fe;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .example {
+      background: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      margin: 20px 0;
+      padding: 10px 15px;
+      border-radius: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
+      background: #4a90e2;
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+
+      header,
+      footer {
+        padding: 15px;
+      }
+
+      section {
+        margin: 10px;
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Notes on Python Functions</h1>
+  </header>
+  <main>
+    <section class="question">
+      <h2>1. Define a Function</h2>
+      <p>Write a function named <code>add_numbers</code> that takes two numbers as arguments and returns their sum.</p>
+      <h3>Test Cases:</h3>
+      <ul>
+        <li><code>add_numbers(3, 5)</code> should return <code>8</code>.</li>
+        <li><code>add_numbers(-1, 1)</code> should return <code>0</code>.</li>
+      </ul>
+    </section>
+
+    <section class="question">
+      <h2>2. Function with Default Parameters</h2>
+      <p>Write a function named <code>greet</code> that takes a name and a greeting message. If no greeting is provided,
+        it should default to "Hello".</p>
+      <h3>Test Cases:</h3>
+      <ul>
+        <li><code>greet("Alice")</code> should return <code>"Hello, Alice!"</code>.</li>
+        <li><code>greet("Bob", "Good morning")</code> should return <code>"Good morning, Bob!"</code>.</li>
+      </ul>
+    </section>
+
+    <section class="question">
+      <h2>3. Return Multiple Values</h2>
+      <p>Write a function named <code>get_min_max</code> that takes a list of numbers and returns the minimum and
+        maximum values.</p>
+      <h3>Test Cases:</h3>
+      <ul>
+        <li><code>get_min_max([1, 2, 3, 4, 5])</code> should return <code>(1, 5)</code>.</li>
+        <li><code>get_min_max([-10, 0, 10])</code> should return <code>(-10, 10)</code>.</li>
+      </ul>
+    </section>
+
+    <section class="question">
+      <h2>4. Function with Variable Arguments</h2>
+      <p>Write a function named <code>calculate_average</code> that takes a variable number of arguments and returns
+        their average.</p>
+      <h3>Test Cases:</h3>
+      <ul>
+        <li><code>calculate_average(1, 2, 3, 4)</code> should return <code>2.5</code>.</li>
+        <li><code>calculate_average(10, 20, 30)</code> should return <code>20.0</code>.</li>
+      </ul>
+    </section>
+
+    <section class="question">
+      <h2>5. Check for Prime Number</h2>
+      <p>Write a function named <code>is_prime</code> that checks if a number is prime.</p>
+      <h3>Test Cases:</h3>
+      <ul>
+        <li><code>is_prime(5)</code> should return <code>True</code>.</li>
+        <li><code>is_prime(4)</code> should return <code>False</code>.</li>
+      </ul>
+    </section>
+
+    <section class="question">
+      <h2>6. Factorial of a Number</h2>
+      <p>Write a function named <code>factorial</code> that returns the factorial of a given number.</p>
+      <h3>Test Cases:</h3>
+      <ul>
+        <li><code>factorial(5)</code> should return <code>120</code>.</li>
+        <li><code>factorial(0)</code> should return <code>1</code>.</li>
+      </ul>
+    </section>
+
+    <section class="question">
+      <h2>7. Fibonacci Sequence</h2>
+      <p>Write a function named <code>fibonacci</code> that returns the nth Fibonacci number.</p>
+      <h3>Test Cases:</h3>
+      <ul>
+        <li><code>fibonacci(5)</code> should return <code>5</code>.</li>
+        <li><code>fibonacci(10 )</code> should return <code>55</code>.</li>
+      </ul>
+    </section>
+
+    <section class="question">
+      <h2>8. Palindrome Check</h2>
+      <p>Write a function named <code>is_palindrome</code> that checks if a given string is a palindrome.</p>
+      <h3>Test Cases:</h3>
+      <ul>
+        <li><code>is_palindrome("racecar")</code> should return <code>True</code>.</li>
+        <li><code>is_palindrome("hello")</code> should return <code>False</code>.</li>
+      </ul>
+    </section>
+
+    <section class="question">
+      <h2>9. Count Vowels in a String</h2>
+      <p>Write a function named <code>count_vowels</code> that counts the number of vowels in a given string.</p>
+      <h3>Test Cases:</h3>
+      <ul>
+        <li><code>count_vowels("hello world")</code> should return <code>3</code>.</li>
+        <li><code>count_vowels("Python programming")</code> should return <code>4</code>.</li>
+      </ul>
+    </section>
+
+    <section class="question">
+      <h2>10. Reverse a String</h2>
+      <p>Write a function named <code>reverse_string</code> that takes a string and returns it reversed.</p>
+      <h3>Test Cases:</h3>
+      <ul>
+        <li><code>reverse_string("hello")</code> should return <code>"olleh"</code>.</li>
+        <li><code>reverse_string("Python")</code> should return <code>"nohtyP"</code>.</li>
+      </ul>
+    </section>
+  </main>
+  </div>

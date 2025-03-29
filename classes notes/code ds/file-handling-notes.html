@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Handling in Python</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        section h2 {
+            color: #007bff;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 5px;
+        }
+
+        section p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .code {
+            background: white;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>File Handling in Python</h1>
+        </header>
+
+        <section>
+            <h2>1. Introduction to File Handling</h2>
+            <p>File handling in Python allows us to work with files (read, write, append, etc.). Python provides built-in functions to interact with files using the <code>open()</code> function.</p>
+        </section>
+
+        <section>
+            <h2>2. Opening a File in Python</h2>
+            <p>The <code>open()</code> function is used to open a file. It returns a file object and takes two main arguments:</p>
+            <div class="code">file_object = open("filename", "mode")</div>
+            <h3>File Modes</h3>
+            <table>
+                <tr>
+                    <th>Mode</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>"r"</td>
+                    <td>Read mode (default), opens a file for reading, gives an error if the file doesn’t exist.</td>
+                </tr>
+                <tr>
+                    <td>"w"</td>
+                    <td>Write mode, creates a new file if it doesn't exist or truncates an existing file.</td>
+                </tr>
+                <tr>
+                    <td>"a"</td>
+                    <td>Append mode, adds data to an existing file without truncating.</td>
+                </tr>
+                <tr>
+                    <td>"x"</td>
+                    <td>Exclusive creation mode, fails if the file already exists.</td>
+                </tr>
+                <tr>
+                    <td>"b"</td>
+                    <td>Binary mode (used with <code>rb</code>, <code>wb</code>, <code>ab</code>, etc.).</td>
+                </tr>
+                <tr>
+                    <td>"t"</td>
+                    <td>Text mode (default), used with <code>rt</code>, <code>wt</code>, etc.</td>
+                </tr>
+            </table>
+            <h3>Example</h3>
+            <div class="code">file = open("example.txt", "w")  # Opens in write mode
+file.write("Hello, this is a test file.")  # Writing to the file
+file.close()  # Closing the file</div>
+        </section>
+
+        <section>
+            <h2>3. Reading from a File</h2>
+    <p>You can read a file using different methods:</p>
+    <ul>
+        <li><code>read(size)</code> – Reads the specified number of bytes (default is entire file).</li>
+        <li><code>readline()</code> – Reads a single line from the file.</li>
+        <li><code>readlines()</code> – Reads all lines and returns them as a list.</li>
+    </ul>
+            <!-- <h2>3. Reading from a File</h2> -->
+            <h3>Example: Reading a File</h3>
+            <div class="code">file = open("example.txt", "r")  # Open file in read mode
+content = file.read()  # Read entire content
+print(content)
+file.close()</div>
+        </section>
+
+        <section>
+            <h2>4. Writing to a File</h2>
+            <h3>Example: Writing Data to a File</h3>
+            <div class="code">file = open("example.txt", "w")  # Open in write mode
+file.write("Python file handling is easy!\n")  # Writing a string
+file.write("We can write multiple lines.\n")
+file.close()</div>
+        </section>
+
+        <section>
+            <h2>5. Appending to a File</h2>
+            <h3>Example: Appending Data</h3>
+            <div class="code">file = open("example.txt", "a")
+file.write("Appending a new line.\n")
+file.close()</div>
+        </section>
+
+        <section>
+            <h2>6. Using `with` Statement (Context Manager)</h2>
+            <h3>Example: Using `with`</h3>
+            <div class="code">with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+# File is automatically closed after the block</div>
+        </section>
+
+        <section>
+            <h2>7. Checking If a File Exists</h2>
+            <div class="code">import os
+if os.path.exists("example.txt"):
+    print("File exists")
+else:
+    print("File not found")</div>
+        </section>
+
+        <section>
+            <h2>8. File Handling with Exception Handling</h2>
+            <div class="code">try:
+    file = open("nonexistent.txt", "r")
+    content = file.read()
+    file.close()
+except FileNotFoundError:
+    print("Error: File not found!")</div>
+        </section>
+
+        <section>
+            <h2>9. Deleting a File</h2>
+            <div class="code">import os
+os.remove("example.txt")</div>
+        </section>
+
+        <section>
+            <h2>10. File Handling in JSON</h2>
+            <h3>Example: Writing JSON Data</h3>
+            <div class="code">import json
+data = {"name": "Alice", "age": 25, "city": "New York"}
+with open("data.json", "w") as file:
+    json.dump(data, file)  # Writing JSON to file</div>
+        </section>
+
+        <section>
+            <h2>11. File Handling in CSV</h2>
+            <h3>Example: Writing to a CSV File</h3>
+            <div class="code">import csv
+data = [["Name", "Age"], ["Alice", 25], ["Bob", 30]]
+with open("data.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)</div>
+        </section>
+
+        <footer>
+            <h2>Conclusion</h2>
+            <p>Python provides powerful tools for file handling using <code>open()</code>, <code>read()</code>, <code>write()</code>, and <code>append()</code>. JSON and CSV modules help handle structured data efficiently.</p>
+        </footer>
+    </div>
+</body>
+</html>

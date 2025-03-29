@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Handling in Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #0073e6;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0073e6;
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0073e6;
+            color: white;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .example {
+            background: #eaf4fc;
+            padding: 15px;
+            border-left: 5px solid #0073e6;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            table,
+            pre {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>File Handling in Python</h1>
+    </header>
+    <div class="container">
+        <p>File handling in Python allows you to create, read, write, and manipulate files. It is an essential part of
+            Python programming, especially when working with data stored in files. This guide covers all topics of file
+            handling with examples.</p>
+        <hr>
+
+        <h2>1. Types of Files</h2>
+        <h3>a) Text Files</h3>
+        <ul>
+            <li>Stores data in plain text format.</li>
+            <li>Each line of the file ends with a newline character (<code>\n</code>).</li>
+            <li>Examples: <code>.txt</code>, <code>.csv</code>, <code>.log</code>.</li>
+        </ul>
+
+        <h3>b) Binary Files</h3>
+        <ul>
+            <li>Stores data in binary format.</li>
+            <li>Examples: Images, videos, <code>.exe</code> files.</li>
+        </ul>
+        <hr>
+
+        <h2>2. File Operations</h2>
+        <p>Python provides several built-in functions for file handling:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>open()</code></td>
+                    <td>Opens a file for reading/writing.</td>
+                </tr>
+                <tr>
+                    <td><code>close()</code></td>
+                    <td>Closes the file.</td>
+                </tr>
+                <tr>
+                    <td><code>read()</code></td>
+                    <td>Reads the content of the file.</td>
+                </tr>
+                <tr>
+                    <td><code>write()</code></td>
+                    <td>Writes content to the file.</td>
+                </tr>
+                <tr>
+                    <td><code>readline()</code></td>
+                    <td>Reads a single line from the file.</td>
+                </tr>
+                <tr>
+                    <td><code>readlines()</code></td>
+                    <td>Reads all lines as a list of strings.</td>
+                </tr>
+                <tr>
+                    <td><code>seek()</code></td>
+                    <td>Changes the file pointer position.</td>
+                </tr>
+                <tr>
+                    <td><code>tell()</code></td>
+                    <td>Returns the current file pointer.</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+
+        <h2>3. File Modes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mode</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>r</code></td>
+                    <td>Read mode. (Default mode)</td>
+                </tr>
+                <tr>
+                    <td><code>w</code></td>
+                    <td>Write mode. Creates a new file or truncates.</td>
+                </tr>
+                <tr>
+                    <td><code>x</code></td>
+                    <td>Create mode. Fails if the file exists.</td>
+                </tr>
+                <tr>
+                    <td><code>a</code></td>
+                    <td>Append mode. Adds data to the file.</td>
+                </tr>
+                <tr>
+                    <td><code>b</code></td>
+                    <td>Binary mode. Used with <code>rb</code>, <code>wb</code>, etc.</td>
+                </tr>
+                <tr>
+                    <td><code>t</code></td>
+                    <td>Text mode. (Default mode)</td>
+                </tr>
+                <tr>
+                    <td><code>+</code></td>
+                    <td>Read and write mode.</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+
+        <h2>4. Opening and Closing Files</h2>
+        <h3>a) Syntax:</h3>
+        <pre><code>file = open("filename", "mode")
+# Perform operations
+file.close()</code></pre>
+
+        <h3>Example:</h3>
+        <pre><code>file = open("example.txt", "w")
+file.write("Hello, World!")
+file.close()</code></pre>
+
+        <h3>Using <code>with</code> Statement</h3>
+        <p>The <code>with</code> statement automatically closes the file after use.</p>
+        <pre><code>with open("example.txt", "r") as file:
+    content = file.read()
+print(content)</code></pre>
+        <h2>5. Reading Files</h2>
+
+        <h3>a) <code>read()</code> Method</h3>
+        <p>Reads the entire content of the file as a single string.</p>
+        <pre><code>with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+</code></pre>
+
+        <h3>b) <code>readline()</code> Method</h3>
+        <p>Reads one line at a time.</p>
+        <pre><code>with open("example.txt", "r") as file:
+    line = file.readline()
+    print(line)
+</code></pre>
+
+        <h3>c) <code>readlines()</code> Method</h3>
+        <p>Reads all lines and returns them as a list of strings.</p>
+        <pre><code>with open("example.txt", "r") as file:
+    lines = file.readlines()
+    print(lines)
+</code></pre>
+
+        <h3>Example File Content:</h3>
+        <pre><code>Hello, World!
+Python is great.
+File handling is easy.
+</code></pre>
+
+        <h4>Output for <code>readlines()</code>:</h4>
+        <pre><code>['Hello, World!\n', 'Python is great.\n', 'File handling is easy.']
+</code></pre>
+
+        <hr>
+
+        <h2>6. Writing to Files</h2>
+
+        <h3>a) <code>write()</code> Method</h3>
+        <p>Writes a string to the file.</p>
+        <pre><code>with open("example.txt", "w") as file:
+    file.write("This is a new file.")
+</code></pre>
+
+        <h3>b) <code>writelines()</code> Method</h3>
+        <p>Writes a list of strings to the file.</p>
+        <pre><code>lines = ["Line 1\n", "Line 2\n", "Line 3\n"]
+with open("example.txt", "w") as file:
+    file.writelines(lines)
+</code></pre>
+
+        <h3>Append Mode (<code>a</code>)</h3>
+        <p>Adds content to the end of the file without overwriting.</p>
+        <pre><code>with open("example.txt", "a") as file:
+    file.write("Appended line.")
+</code></pre>
+
+        <hr>
+
+        <h2>7. File Pointer Manipulation</h2>
+
+        <h3>a) <code>tell()</code> Method</h3>
+        <p>Returns the current position of the file pointer.</p>
+        <pre><code>with open("example.txt", "r") as file:
+    file.read(5)
+    print(file.tell())  # Output: 5
+</code></pre>
+
+        <h3>b) <code>seek()</code> Method</h3>
+        <p>Moves the file pointer to a specific position.</p>
+        <pre><code>with open("example.txt", "r") as file:
+    file.seek(10)
+    print(file.read())
+</code></pre>
+
+        <hr>
+
+        <h2>8. Handling Binary Files</h2>
+
+        <h3>Reading Binary Files</h3>
+        <pre><code>with open("image.jpg", "rb") as file:
+    content = file.read()
+</code></pre>
+
+        <h3>Writing Binary Files</h3>
+        <pre><code>with open("new_image.jpg", "wb") as file:
+    file.write(content)
+</code></pre>
+
+        <hr>
+
+        <h2>9. File Exceptions</h2>
+        <p>Use <code>try-except</code> to handle file-related errors.</p>
+        <pre><code>try:
+    with open("nonexistent.txt", "r") as file:
+        content = file.read()
+except FileNotFoundError:
+    print("File not found.")
+</code></pre>
+
+        <hr>
+
+        <h2>10. Examples of File Handling</h2>
+
+        <h3>a) Counting Words in a File</h3>
+        <pre><code>with open("example.txt", "r") as file:
+    content = file.read()
+    words = content.split()
+    print("Word Count:", len(words))
+</code></pre>
+
+        <h3>b) Copying a File</h3>
+        <pre><code>with open("source.txt", "r") as source:
+    with open("destination.txt", "w") as destination:
+        destination.write(source.read())
+</code></pre>
+
+        <h3>c) Searching for a Word</h3>
+        <pre><code>with open("example.txt", "r") as file:
+    content = file.read()
+    if "Python" in content:
+        print("Word found!")
+    else:
+        print("Word not found.")
+</code></pre>
+
+        <hr>
+
+        <h2>11. CSV File Handling</h2>
+
+        <p>Python provides the <code>csv</code> module for handling CSV files.</p>
+
+        <h3>Reading CSV Files</h3>
+        <pre><code>import csv
+
+with open("data.csv", "r") as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
+</code></pre>
+
+        <h3>Writing CSV Files</h3>
+        <pre><code>import csv
+
+data = [["Name", "Age"], ["Alice", 25], ["Bob", 30]]
+with open("data.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+</code></pre>
+
+        <hr>
+
+        <h2>12. JSON File Handling</h2>
+
+        <p>Python provides the <code>json</code> module for working with JSON files.</p>
+
+        <h3>Reading JSON Files</h3>
+        <pre><code>import json
+
+with open("data.json", "r") as file:
+    data = json.load(file)
+    print(data)
+</code></pre>
+
+        <h3>Writing JSON Files</h3>
+        <pre><code>import json
+
+data = {"Name": "Alice", "Age": 25}
+with open("data.json", "w") as file:
+    json.dump(data, file)
+</code></pre>
+
+        <hr>
+
+        <h2>13. Best Practices</h2>
+        <ul>
+            <li>Always close the file using <code>file.close()</code> or <code>with</code> statement.</li>
+            <li>Handle exceptions using <code>try-except</code>.</li>
+            <li>Use relative paths for better portability.</li>
+            <li>Avoid hardcoding file names and use variables or configuration files.</li>
+        </ul>
+
+
+        <!-- Additional sections (5 to 13) would follow the same structure -->
+
+    </div>
+    <footer>
+        <p>&copy; 2024 File Handling Guide</p>
+    </footer>
+</body>
+
+</html>

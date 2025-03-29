@@ -1,0 +1,11 @@
+PS C:\Users\ASUS\OneDrive\Desktop\New folder> python -u "c:\Users\ASUS\OneDrive\Desktop\New folder\file_handling.py"
+b'1234 '
+PS C:\Users\ASUS\OneDrive\Desktop\New folder> python -u "c:\Users\ASUS\OneDrive\Desktop\New folder\file_handling.py"
+b'1234 '
+PS C:\Users\ASUS\OneDrive\Desktop\New folder> python -u "c:\Users\ASUS\OneDrive\Desktop\New folder\file_handling.py"
+PS C:\Users\ASUS\OneDrive\Desktop\New folder> python -u "c:\Users\ASUS\OneDrive\Desktop\New folder\file_handling.py"
+Traceback (most recent call last):
+  File "c:\Users\ASUS\OneDrive\Desktop\New folder\file_handling.py", line 17, in <module>
+    f = open("hemant.txt",'x')       
+FileExistsError: [Errno 17] File exists: 'hemant.txt'
+PS C:\Users\ASUS\OneDrive\Desktop\New folder>

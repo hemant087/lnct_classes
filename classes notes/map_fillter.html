@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Functions: Map, Filter, Reduce</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        section h2 {
+            color: #007bff;
+            border-bottom: 2px solid #f4f4f9;
+            padding-bottom: 5px;
+        }
+
+        section p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .code {
+            background: #f4f4f4;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Map, Filter, and Reduce</h1>
+            <!-- <p>Map, Filter, and Reduce</p> -->
+        </header>
+        <section>
+            <h2>1. <code>map</code> Function</h2>
+            <p>The <code>map</code> function applies a function to every item in an iterable and returns a map object.
+            </p>
+            <p><strong>Syntax:</strong></p>
+            <div class="code">map(function, iterable)</div>
+            <p><strong>Examples:</strong></p>
+            <div class="code">
+                <pre># Squaring Numbers
+numbers = [1, 2, 3, 4, 5]
+squared = map(lambda x: x ** 2, numbers)
+print(list(squared))  # Output: [1, 4, 9, 16, 25]</pre>
+            </div>
+            <!-- <p><strong>Example 2: Filtering Words Longer Than 3 Characters</strong></p>
+            <div class="code">
+                <pre>
+words = ["hi", "hello", "bye", "world"]
+long_words = filter(lambda word: len(word) > 3, words)
+print(list(long_words))  # Output: ['hello', 'world']
+    </pre>
+            </div>
+
+            <p><strong>Example 3: Filtering Positive Numbers</strong></p>
+            <div class="code">
+                <pre>
+numbers = [-10, -5, 0, 5, 10]
+positives = filter(lambda x: x > 0, numbers)
+print(list(positives))  # Output: [5, 10]
+    </pre>
+            </div> -->
+            <h3>Example 2: Converting Strings to Uppercase</h3>
+            <div class="code">
+                <pre># Converting Strings to Uppercase
+names = ["alice", "bob", "charlie"]
+uppercase_names = map(str.upper, names)
+print(list(uppercase_names))  # Output: ['ALICE', 'BOB', 'CHARLIE']</pre>
+            </div>
+
+            <h3>Example 3: Adding Corresponding Elements from Two Lists</h3>
+            <div class="code">
+                <pre># Adding Corresponding Elements from Two Lists
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+added = map(lambda x, y: x + y, list1, list2)
+print(list(added))  # Output: [5, 7, 9]</pre>
+            </div>
+
+
+        </section>
+
+        <section>
+            <h2>2. <code>filter</code> Function</h2>
+            <p>The <code>filter</code> function filters elements from an iterable based on a condition.</p>
+            <p><strong>Syntax:</strong></p>
+            <div class="code">filter(function, iterable)</div>
+            <p><strong>Examples:</strong></p>
+            <div class="code">
+                <pre># Filtering Even Numbers
+numbers = [1, 2, 3, 4, 5, 6]
+evens = filter(lambda x: x % 2 == 0, numbers)
+print(list(evens))  # Output: [2, 4, 6]</pre>
+            </div>
+            <p><strong>Example 2: Filtering Words Longer Than 3 Characters</strong></p>
+            <div class="code">
+                <pre>
+words = ["hi", "hello", "bye", "world"]
+long_words = filter(lambda word: len(word) > 3, words)
+print(list(long_words))  # Output: ['hello', 'world']
+    </pre>
+            </div>
+
+            <p><strong>Example 3: Filtering Positive Numbers</strong></p>
+            <div class="code">
+                <pre>
+numbers = [-10, -5, 0, 5, 10]
+positives = filter(lambda x: x > 0, numbers)
+print(list(positives))  # Output: [5, 10]
+    </pre>
+            </div>
+
+
+        </section>
+
+        <section>
+            <h2>3. <code>reduce</code> Function</h2>
+            <p>The <code>reduce</code> function applies a function cumulatively to the items of an iterable to reduce it
+                to a single value.</p>
+            <p><strong>Syntax:</strong></p>
+            <div class="code">
+                <pre>from functools import reduce
+reduce(function, iterable[, initializer])</pre>
+            </div>
+            <p><strong>Examples:</strong></p>
+            <div class="code">
+                <pre># Summing Numbers
+from functools import reduce
+numbers = [1, 2, 3, 4, 5]
+sum_of_numbers = reduce(lambda x, y: x + y, numbers)
+print(sum_of_numbers)  # Output: 15</pre>
+            </div>
+            <p><strong>Example 2: Finding the Product of Numbers</strong></p>
+            <div class="code">
+                <pre>
+from functools import reduce
+
+numbers = [1, 2, 3, 4]
+product = reduce(lambda x, y: x * y, numbers)
+print(product)  # Output: 24
+    </pre>
+            </div>
+
+            <p><strong>Example 3: Finding the Largest Number</strong></p>
+            <div class="code">
+                <pre>
+from functools import reduce
+
+numbers = [3, 7, 2, 9, 5]
+largest = reduce(lambda x, y: x if x > y else y, numbers)
+print(largest)  # Output: 9
+    </pre>
+            </div>
+
+        </section>
+        <section>
+            <h2>Advanced Examples Combining <code>map</code>, <code>filter</code>, and <code>reduce</code></h2>
+
+            <p><strong>Example 1: Sum of Squares of Even Numbers</strong></p>
+            <div class="code">
+                <pre>
+    from functools import reduce
+    
+    numbers = [1, 2, 3, 4, 5, 6]
+    evens = filter(lambda x: x % 2 == 0, numbers)
+    squares = map(lambda x: x ** 2, evens)
+    sum_of_squares = reduce(lambda x, y: x + y, squares)
+    print(sum_of_squares)  # Output: 56 (2^2 + 4^2 + 6^2)
+        </pre>
+            </div>
+
+            <p><strong>Example 2: Finding the Longest Word</strong></p>
+            <div class="code">
+                <pre>
+    from functools import reduce
+    
+    words = ["python", "java", "c++", "javascript"]
+    longest = reduce(lambda x, y: x if len(x) > len(y) else y, words)
+    print(longest)  # Output: 'javascript'
+        </pre>
+            </div>
+
+            <p><strong>Example 3: Transforming and Filtering a List</strong></p>
+            <div class="code">
+                <pre>
+    numbers = [10, 15, 20, 25, 30]
+    transformed = map(lambda x: x / 5, numbers)  # Divide each by 5
+    filtered = filter(lambda x: x > 4, transformed)  # Keep results > 4
+    print(list(filtered))  # Output: [5.0, 6.0]
+        </pre>
+            </div>
+        </section>
+        <section>
+            <h2>Comparison and Use Cases</h2>
+            <p><strong>When to Use Each:</strong></p>
+            <ul>
+                <li><code>map</code>: Transform each element in an iterable (e.g., squaring numbers).</li>
+                <li><code>filter</code>: Extract elements that satisfy a condition (e.g., finding even numbers).</li>
+                <li><code>reduce</code>: Aggregate values into a single result (e.g., summing all numbers).</li>
+            </ul>
+        </section>
+        <section>
+            <h2>When to Use Each</h2>
+
+            <p><strong><code>map</code>:</strong></p>
+            <ul>
+                <li>Use when you need to apply the same function to every element in an iterable (e.g., squaring,
+                    converting data types).</li>
+                <li><strong>Example:</strong> Transform a list of numbers or format strings consistently.</li>
+            </ul>
+
+            <p><strong><code>filter</code>:</strong></p>
+            <ul>
+                <li>Use when you want to extract elements that satisfy a certain condition.</li>
+                <li><strong>Example:</strong> Removing invalid data points or selecting only positive numbers.</li>
+            </ul>
+
+            <p><strong><code>reduce</code>:</strong></p>
+            <ul>
+                <li>Use when you need to combine all elements of an iterable into a single value (e.g., summing a list,
+                    calculating a product).</li>
+                <li><strong>Example:</strong> Aggregating numerical results or building a string from a list of
+                    characters.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; Reffto</p>
+        </footer>
+    </div>
+</body>
+
+</html>
